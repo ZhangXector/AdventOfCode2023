@@ -12,6 +12,10 @@ pub fn main()
 
     for line in lines_vector
     {
-
+        let mut line_split = line.split(&[':', '|'][..]);
+        let card = line_split.next().expect("Unable to split card numbers.").trim();
+        let winning_nums = line_split.next().expect("Unable to split winning numbers.").trim();
+        let numbers = line_split.next().expect("Unable to split numbers.").trim();
+        println!("{}\n{}\n{}", card, winning_nums, numbers);
     }
 }
