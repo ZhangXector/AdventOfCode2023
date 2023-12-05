@@ -1,5 +1,5 @@
-use std::fs;
 use std::collections::HashMap;
+use crate::get_lines;
 
 pub fn main()
 {
@@ -16,11 +16,7 @@ pub fn main()
         ("nine", "9")
     ]);
 
-    let lines_vector: Vec<String> = fs::read_to_string(file_path)
-        .expect("Problem opening the file: {file_path}")
-        .lines()
-        .map(String::from)
-        .collect();
+    let lines_vector = get_lines(file_path);
 
     let mut total: u32 = 0;
     for line in lines_vector

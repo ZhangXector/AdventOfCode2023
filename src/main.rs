@@ -1,12 +1,14 @@
+use std::fs;
 pub mod puzzles;
 
-use std::fs;
 use crate::puzzles::puzzle01;
 use crate::puzzles::puzzle04;
+use crate::puzzles::puzzle02;
 
 fn main()
 {
     //puzzle01::main();
+    //puzzle02::main();
     puzzle04::main();
 }
 
